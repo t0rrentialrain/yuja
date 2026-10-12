@@ -1,0 +1,113 @@
+/* Yuja card: fruit glass. Lives in a shadow root, so page CSS can't leak in; the theme
+   tokens (--y-*, see content.css) still inherit through from the page. */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap");
+
+:host { all: initial; }
+
+.card {
+  position: relative; width: 320px; box-sizing: border-box; padding: 14px 16px 12px;
+  font: 14px/1.45 "Nunito", "M PLUS Rounded 1c", "Segoe UI", system-ui, sans-serif; color: var(--y-ink);
+  border-radius: 26px; overflow: hidden;
+  /* soda fizz: a few soft bubbles over pale fruit glass */
+  background:
+    radial-gradient(circle at 88% 18%, var(--y-gloss) 0 5px, transparent 6px),
+    radial-gradient(circle at 93% 30%, var(--y-gloss) 0 3px, transparent 4px),
+    radial-gradient(circle at 82% 34%, var(--y-gloss) 0 2px, transparent 3px),
+    radial-gradient(120% 90% at 100% 0%, var(--y-glow1), transparent 60%),
+    radial-gradient(90% 80% at 0% 100%, var(--y-glow2), transparent 65%),
+    linear-gradient(180deg, color-mix(in srgb, var(--y-surface1) 99%, transparent), color-mix(in srgb, var(--y-surface2) 98%, transparent));
+  backdrop-filter: blur(20px) saturate(1.6); -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  border: 1.5px solid var(--y-edge);
+  box-shadow: 0 14px 36px var(--y-shadow), 0 2px 6px var(--y-shadow), inset 0 1px 0 var(--y-gloss),
+              inset 0 -10px 24px color-mix(in srgb, var(--y-new) 18%, transparent);
+  animation: pop .32s cubic-bezier(.18,1.6,.4,1);
+}
+/* glossy top highlight */
+.card::before { content: ""; position: absolute; inset: 0 0 58% 0; pointer-events: none;
+  background: linear-gradient(180deg, var(--y-gloss), transparent);
+  border-radius: 26px 26px 50% 50% / 26px 26px 18px 18px; }
+@keyframes pop { 0% { opacity: 0; transform: scale(.9) translateY(-6px); } 100% { opacity: 1; } }
+
+button { font: inherit; color: inherit; cursor: pointer; border: 0; }
+
+.chips { position: relative; display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 11px 3px 8px; border-radius: 999px;
+  font-weight: 700; font-size: 13px; background: color-mix(in srgb, var(--y-field) 85%, transparent);
+  box-shadow: inset 0 1px 0 var(--y-gloss), 0 1px 3px var(--y-shadow); border: 1px solid var(--y-line);
+  transition: transform .15s cubic-bezier(.2,1.8,.4,1); }
+.chip:hover { transform: translateY(-1px) scale(1.04); }
+.chip.on { color: var(--y-learn-ink); border-color: var(--y-learn-lo);
+  background: linear-gradient(180deg, var(--y-learn-hi) 0%, var(--y-learn) 55%, var(--y-learn-lo) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 2px 6px color-mix(in srgb, var(--y-learn-lo) 40%, transparent); }
+.dot { width: 9px; height: 9px; border-radius: 50%; box-shadow: inset 0 1px 1px rgba(255,255,255,.85), 0 0 0 1px rgba(0,0,0,.06); }
+.dot.unknown { background: var(--y-new); } .dot.learning { background: var(--y-learn); }
+.dot.known { background: var(--y-known); } .dot.ignored { background: var(--y-faint); }
+.chip.on .dot { box-shadow: 0 0 0 2px var(--y-field); }
+
+.head { position: relative; display: flex; align-items: baseline; gap: 10px; }
+.word { font-size: 27px; font-weight: 800; letter-spacing: -.5px; color: var(--y-ink); }
+.pos { font-size: 12px; font-weight: 700; color: var(--y-soft); padding: 1px 8px; border-radius: 999px;
+  background: color-mix(in srgb, var(--y-new-hi) 45%, transparent); }
+.pos:empty { display: none; }
+
+.defs { position: relative; margin: 6px 0 12px; min-height: 22px; }
+.defs ol { margin: 0; padding-left: 20px; }
+.defs li { margin: 4px 0; }
+.defs li::marker { color: var(--y-new-lo); font-weight: 800; }
+.gloss { font-weight: 800; font-size: 15px; color: var(--y-accent); }
+.concept { font-weight: 600; color: var(--y-ink); }
+.explain { font-size: 12px; line-height: 1.35; color: var(--y-soft); }
+.note { margin-left: 4px; padding: 0 7px; border-radius: 999px; font-size: 10.5px; font-weight: 700;
+  color: var(--y-new-ink); background: color-mix(in srgb, var(--y-new) 35%, transparent); white-space: nowrap; }
+.none { color: var(--y-soft); font-style: italic; }
+.more { margin-top: 4px; padding: 0; background: none; color: var(--y-new-lo); font-weight: 800; font-size: 12px; }
+
+.status { position: relative; display: flex; gap: 6px; }
+.pill { flex: 1; padding: 6px 0; border-radius: 999px; font-weight: 800; font-size: 12px;
+  background: linear-gradient(180deg, var(--y-field), var(--y-surface1)); border: 1px solid var(--y-line);
+  box-shadow: inset 0 1px 0 var(--y-gloss), 0 1px 2px var(--y-shadow);
+  transition: transform .15s cubic-bezier(.2,1.8,.4,1); }
+.pill kbd { font: 800 10px "Nunito", system-ui; opacity: .5; margin-right: 4px; }
+.pill:hover { transform: translateY(-1px); }
+.pill:active { transform: scale(.95); }
+.pill.on { border-color: transparent; box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 2px 8px rgba(0,0,0,.12); }
+.pill.on kbd { opacity: .75; }
+.pill.unknown.on  { color: var(--y-new-ink); background: linear-gradient(180deg, var(--y-new-hi), var(--y-new) 55%, var(--y-new-lo)); }
+.pill.learning.on { color: var(--y-learn-ink); background: linear-gradient(180deg, var(--y-learn-hi), var(--y-learn) 55%, var(--y-learn-lo)); }
+.pill.known.on    { color: var(--y-known-ink); background: linear-gradient(180deg, var(--y-known-hi), var(--y-known) 55%, var(--y-known-lo)); }
+.pill.ignored.on  { color: var(--y-ink); background: linear-gradient(180deg, var(--y-seg), var(--y-line)); }
+
+.ai { position: relative; display: flex; gap: 6px; margin-top: 8px; }
+.ai-btn { padding: 4px 11px; border-radius: 999px; font-weight: 800; font-size: 12px; color: var(--y-ink);
+  background: color-mix(in srgb, var(--y-field) 85%, transparent); border: 1px solid var(--y-line);
+  box-shadow: inset 0 1px 0 var(--y-gloss), 0 1px 2px var(--y-shadow); transition: transform .15s cubic-bezier(.2,1.8,.4,1); }
+.ai-btn:hover { transform: translateY(-1px); border-color: var(--y-new); }
+.ai-btn kbd { font: 800 10px "Nunito", system-ui; opacity: .5; margin-right: 4px; }
+.ai-out { position: relative; margin-top: 8px; padding: 8px 10px; border-radius: 14px; font-size: 13px; line-height: 1.45;
+  background: color-mix(in srgb, var(--y-field) 80%, transparent); border: 1px solid var(--y-line); animation: pop .25s; }
+.ai-out[hidden] { display: none; }
+.mine-row { position: relative; display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+.mine { padding: 6px 14px; border-radius: 999px; font-weight: 800; font-size: 12px; color: var(--y-known-ink);
+  background: linear-gradient(180deg, var(--y-known-hi), var(--y-known) 55%, var(--y-known-lo));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 2px 6px color-mix(in srgb, var(--y-known) 35%, transparent);
+  transition: transform .15s cubic-bezier(.2,1.8,.4,1); }
+.mine:hover { transform: translateY(-1px); }
+.mine:disabled { filter: grayscale(.6); cursor: default; transform: none; }
+.mine kbd { font: 800 10px "Nunito", system-ui; opacity: .8; margin-right: 4px; }
+.mine-note { font-size: 12px; font-weight: 700; color: var(--y-soft); }
+.meta { margin-left: auto; display: flex; align-items: baseline; gap: 8px; }
+.rank { font-size: 12px; font-weight: 800; color: var(--y-learn-ink); padding: 1px 8px; border-radius: 999px;
+  background: color-mix(in srgb, var(--y-learn) 35%, transparent); }
+.stars { font-size: 12px; letter-spacing: 1px; color: var(--y-new-lo); }
+.stars i { font-style: normal; color: color-mix(in srgb, var(--y-ink) 15%, transparent); }
+
+.fix { position: relative; margin-top: 6px; }
+.fix-toggle { padding: 0; background: none; font-size: 11px; font-weight: 700; color: var(--y-faint); text-decoration: underline dotted; }
+.fix-toggle:hover { color: var(--y-soft); }
+.fix-list { display: grid; gap: 4px; margin-top: 6px; }
+.fix-surface { font-size: 11px; font-weight: 800; color: var(--y-soft); }
+.fix-list button { text-align: left; padding: 5px 10px; border-radius: 12px; font-size: 12px; font-weight: 700;
+  background: color-mix(in srgb, var(--y-field) 85%, transparent); border: 1px solid var(--y-line); }
+.fix-list button:hover { background: var(--y-field); border-color: var(--y-new); }
+.fix-list button.on { color: var(--y-learn-ink); background: color-mix(in srgb, var(--y-learn) 40%, transparent); }
+.fix-list[hidden] { display: none; }   /* display:grid above would override [hidden] */

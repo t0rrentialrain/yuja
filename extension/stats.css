@@ -1,0 +1,24 @@
+/* Stats page (theme tokens from content.css) */
+.stats { display: grid; gap: 16px; max-width: 980px; margin: 0 auto; padding: 20px 24px 40px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.tile, .card-box { padding: 16px 18px; border-radius: 20px; border: 1.5px solid var(--y-edge);
+  background: linear-gradient(180deg, var(--y-surface1), var(--y-surface2)); box-shadow: 0 6px 20px var(--y-shadow); }
+.tile b { display: block; font-size: 30px; font-weight: 800; letter-spacing: -.5px; color: var(--y-ink); }
+.tile span { font-size: 13px; font-weight: 700; color: var(--y-soft); }
+.card-box h2 { margin: 0 0 8px; font-size: 15px; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.chart svg { display: block; overflow: visible; }
+.chart .grid { stroke: var(--y-line); stroke-width: 1; opacity: .7; }
+.chart .tick { font: 600 11px "Nunito", system-ui, sans-serif; fill: var(--y-faint); }
+.chart .cross { stroke: var(--y-soft); stroke-width: 1; stroke-dasharray: 3 3; }
+.chart .hit { fill: transparent; cursor: crosshair; }
+.empty, .hint { margin: 4px 0; font-size: 13px; color: var(--y-soft); }
+.unknown { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 6px 16px; margin: 8px 0 0; padding-left: 22px; }
+.unknown li { display: flex; align-items: baseline; gap: 8px; font-size: 16px; }
+.unknown li::marker { color: var(--y-faint); font-size: 12px; }
+.unknown .w { flex: 1; font-weight: 700; }
+.unknown .n { font-size: 12px; color: var(--y-soft); }
+.unknown .r { font-size: 11px; color: var(--y-faint); }
+.tip { position: fixed; z-index: 10; padding: 6px 10px; border-radius: 10px; pointer-events: none; font-size: 12px; color: var(--y-ink);
+  background: var(--y-field); border: 1px solid var(--y-line); box-shadow: 0 4px 14px var(--y-shadow); }
+.tip span { color: var(--y-soft); }

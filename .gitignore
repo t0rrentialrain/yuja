@@ -1,0 +1,10 @@
+yuja.sqlite
+krdict.sqlite
+yuja.log
+__pycache__/
+*.zip
+*.jsonl
+cache/
+.env
+eval/results.json
+eval/compare.html

@@ -1,0 +1,242 @@
+/* ---- Fruit themes: every Yuja color is a token; a theme only sets tokens. The card's
+   shadow root inherits them too. Picked in the ⚙ menu (html[data-yuja-theme]). ---- */
+:root, html[data-yuja-theme=yuja] {          /* 유자 (default) */
+  --y-new: #ffc21a; --y-new-hi: #ffe680; --y-new-lo: #f5a800; --y-new-ink: #5a4100;
+  --y-learn: #b8e04a; --y-learn-hi: #e2f79a; --y-learn-lo: #8cc63f; --y-learn-ink: #2c4a10;
+  --y-known: #4caf50; --y-known-hi: #a5dd8a; --y-known-lo: #3a9a3f; --y-known-ink: #fff;
+  --y-ink: #2f4424; --y-soft: #7c9a5e; --y-faint: #9aae80; --y-accent: #3f7a17;
+  --y-surface1: #fffdf2; --y-surface2: #fff6c9; --y-field: #fff; --y-line: #e6dc9e; --y-edge: #fff;
+  --y-hover: rgba(255,230,128,.4); --y-seg: #f3efd2; --y-shadow: rgba(160,130,0,.22);
+  --y-glow1: rgba(255,226,110,.45); --y-glow2: rgba(190,232,110,.35); --y-gloss: rgba(255,255,255,.8);
+}
+html[data-yuja-theme=strawberry] {           /* 딸기 */
+  --y-new: #ff5c8a; --y-new-hi: #ffadc2; --y-new-lo: #e63b6c; --y-new-ink: #fff;
+  --y-learn: #ffc2d1; --y-learn-hi: #ffe3ea; --y-learn-lo: #f59ab3; --y-learn-ink: #7a2440;
+  --y-known: #58b368; --y-known-hi: #a8dfa9; --y-known-lo: #3f9a50; --y-known-ink: #fff;
+  --y-ink: #4a2531; --y-soft: #a0707e; --y-faint: #c39aa6; --y-accent: #d6336c;
+  --y-surface1: #fff7f9; --y-surface2: #ffe1e9; --y-field: #fff; --y-line: #f5c4d1; --y-edge: #fff;
+  --y-hover: rgba(255,173,194,.35); --y-seg: #fbe3ea; --y-shadow: rgba(200,60,100,.2);
+  --y-glow1: rgba(255,150,180,.4); --y-glow2: rgba(150,215,140,.3); --y-gloss: rgba(255,255,255,.8);
+}
+html[data-yuja-theme=grape] {                /* 청포도 */
+  --y-new: #a3d64a; --y-new-hi: #d6f2a0; --y-new-lo: #84bd2c; --y-new-ink: #2b4a0c;
+  --y-learn: #8ee0c8; --y-learn-hi: #c8f3e6; --y-learn-lo: #5fc9aa; --y-learn-ink: #12443a;
+  --y-known: #2f9e63; --y-known-hi: #8fd6ae; --y-known-lo: #23824f; --y-known-ink: #fff;
+  --y-ink: #23412e; --y-soft: #6f9a80; --y-faint: #95b9a3; --y-accent: #2f8a4f;
+  --y-surface1: #f8fff4; --y-surface2: #e3f7da; --y-field: #fff; --y-line: #c9e8bf; --y-edge: #fff;
+  --y-hover: rgba(190,235,150,.4); --y-seg: #e2f3da; --y-shadow: rgba(60,140,60,.2);
+  --y-glow1: rgba(200,240,140,.45); --y-glow2: rgba(140,225,200,.35); --y-gloss: rgba(255,255,255,.8);
+}
+html[data-yuja-theme=peach] {                /* 복숭아 */
+  --y-new: #ff8f6b; --y-new-hi: #ffc6ae; --y-new-lo: #f06f47; --y-new-ink: #fff;
+  --y-learn: #ffd3a3; --y-learn-hi: #ffe9cf; --y-learn-lo: #f5b877; --y-learn-ink: #6b3b10;
+  --y-known: #6cbf7c; --y-known-hi: #b5e2bd; --y-known-lo: #50a462; --y-known-ink: #fff;
+  --y-ink: #4a2f26; --y-soft: #a77d6e; --y-faint: #c7a497; --y-accent: #e0603a;
+  --y-surface1: #fffaf6; --y-surface2: #ffe6d9; --y-field: #fff; --y-line: #f5cdb9; --y-edge: #fff;
+  --y-hover: rgba(255,198,174,.4); --y-seg: #fbe6db; --y-shadow: rgba(220,110,70,.2);
+  --y-glow1: rgba(255,180,150,.45); --y-glow2: rgba(255,220,160,.35); --y-gloss: rgba(255,255,255,.8);
+}
+html[data-yuja-theme=blueberry] {            /* 블루베리 (dark) */
+  --y-new: #9aa5ff; --y-new-hi: #c3c9ff; --y-new-lo: #7480f0; --y-new-ink: #171a3d;
+  --y-learn: #c3a6ff; --y-learn-hi: #dccbff; --y-learn-lo: #a283f0; --y-learn-ink: #2a1650;
+  --y-known: #6fd3a0; --y-known-hi: #a6e8c5; --y-known-lo: #4cb983; --y-known-ink: #0f2e20;
+  --y-ink: #ebe9ff; --y-soft: #a9a7d0; --y-faint: #7d7ba6; --y-accent: #b9a6ff;
+  --y-surface1: #2a2b46; --y-surface2: #1e1f36; --y-field: #343659; --y-line: #45476e; --y-edge: #3a3c60;
+  --y-hover: rgba(154,165,255,.16); --y-seg: #2f3152; --y-shadow: rgba(0,0,0,.45);
+  --y-glow1: rgba(130,140,255,.25); --y-glow2: rgba(180,140,255,.18); --y-gloss: rgba(255,255,255,.07);
+}
+
+/* Page words: soft underlines instead of fills, so the page stays readable. */
+.yuja { cursor: pointer; text-decoration-line: underline; text-decoration-thickness: 3px;
+  text-underline-offset: 4px; text-decoration-skip-ink: none; transition: text-decoration-color .2s, background .2s; }
+.yuja-unknown { text-decoration-color: color-mix(in srgb, var(--y-new) 80%, transparent); }
+.yuja-gram { text-decoration-color: color-mix(in srgb, var(--y-new) 90%, transparent); text-decoration-style: dotted; }
+.yuja-learning { text-decoration-color: color-mix(in srgb, var(--y-learn-lo) 55%, transparent); text-decoration-thickness: 1.5px; }
+.yuja-hl { background: color-mix(in srgb, var(--y-new) 25%, transparent); border-radius: 4px; }
+.yuja-known, .yuja-ignored { text-decoration-color: transparent; }
+.yuja:hover { text-decoration-color: var(--y-new-lo); background: color-mix(in srgb, var(--y-new) 18%, transparent); border-radius: 4px; }
+
+/* YouTube: our subtitle bar replaces YouTube's captions. */
+html.yuja-yt .ytp-caption-window-container { display: none !important; }
+/* Placement, size, font, background and outline come from the ⚙ menu (applySettings sets the inline vars). */
+.yuja-subs { --ys-a: 92%; --ys-pad: 1; --ys-stroke: 0 transparent;
+  position: absolute; left: 9%; bottom: 12%; z-index: 60; box-sizing: border-box;
+  width: max-content; max-width: 82%;   /* own width, not "what's left right of it", so placeBar() can move it freely */
+  text-align: center; color: var(--y-ink); word-break: keep-all;
+  font: 700 clamp(18px, 2.3vw, 36px) "Nunito", "Malgun Gothic", sans-serif;
+  padding: calc(.25em * var(--ys-pad)) calc(.85em * var(--ys-pad)); line-height: calc(1.2 + .35 * var(--ys-pad));   /* Box size */
+  -webkit-text-stroke: var(--ys-stroke); paint-order: stroke fill;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--y-surface1) var(--ys-a), transparent), color-mix(in srgb, var(--y-surface2) var(--ys-a), transparent));
+  border: 1.5px solid color-mix(in srgb, var(--y-edge) var(--ys-a), transparent); border-radius: calc(6px + 12px * var(--ys-pad)); backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--y-shadow) var(--ys-a), transparent), inset 0 1px 0 var(--y-gloss);
+  cursor: grab; user-select: none; touch-action: none; transition: filter .2s; }
+.yuja-subs[data-bg=dark] { color: #fff; background: rgb(0 0 0 / var(--ys-a)); border-color: transparent; box-shadow: none; border-radius: 10px; }
+.yuja-subs[data-bg=none] { color: #fff; background: none; border-color: transparent; box-shadow: none; backdrop-filter: none; }
+.yuja-subs.dragging { cursor: grabbing; outline: 2px dashed color-mix(in srgb, var(--y-new) 80%, transparent); outline-offset: 4px; }
+.yuja-subs.dragging .yuja { pointer-events: none; }
+.yuja-subs:empty, .yuja-subs.off { display: none; }
+.yuja-subs.hush { visibility: hidden; }                   /* listening modes: hidden while the line plays */
+.yuja-subs .yuja-en { display: block; margin-top: .1em; font-size: .62em; font-weight: 600; line-height: 1.35; opacity: .92; }
+.yuja-subs.en-only .yuja-ko { display: none; }
+.yuja-subs.en-only .yuja-en { margin-top: 0; font-size: .8em; }
+.yuja-subs .yuja-sum { display: block; max-width: 34em; font-size: .62em; font-weight: 600; line-height: 1.45; text-align: left; }
+.yuja-subs .yuja-sum b { display: block; margin-bottom: .15em; font-size: .78em; font-weight: 800; letter-spacing: .05em;
+  text-transform: uppercase; opacity: .7; }
+.yuja-subs.blur:not(:hover) { filter: blur(7px); }
+.yuja-subs.plain .yuja:not(:hover) { text-decoration-color: transparent; }
+
+/* ⚙ appears only while the mouse is over the video (like YouTube's own controls). */
+.yuja-gear { position: absolute; top: 12px; right: 12px; z-index: 61; width: 36px; height: 36px; border: 0; border-radius: 50%;
+  cursor: pointer; font-size: 18px; line-height: 36px; color: var(--y-new-ink); opacity: 0; transition: opacity .2s, transform .2s;
+  background: linear-gradient(180deg, var(--y-new-hi), var(--y-new) 55%, var(--y-new-lo)); box-shadow: 0 2px 8px rgba(0,0,0,.3), inset 0 1px 0 #fff8; }
+#movie_player:hover .yuja-gear, .yuja-gear:focus-visible { opacity: 1; }
+.yuja-gear:hover { transform: rotate(30deg); }
+.yuja-flash { position: absolute; left: 50%; top: 14%; transform: translateX(-50%); z-index: 61; padding: 6px 16px;
+  border-radius: 999px; pointer-events: none; font: 800 14px "Nunito", system-ui, sans-serif; color: #fff; background: rgb(0 0 0 / 65%);
+  animation: yuja-flash 1.4s forwards; }
+@keyframes yuja-flash { 0% { opacity: 0; } 10%, 75% { opacity: 1; } 100% { opacity: 0; } }
+/* Status pill (loading / transcribing), top-left of the player; the yuja bobs while it waits. */
+.yuja-status { position: absolute; left: 12px; top: 12px; z-index: 61; display: flex; align-items: center; gap: 7px;
+  padding: 5px 13px 5px 7px; border-radius: 999px; pointer-events: none; color: var(--y-ink);
+  font: 800 13px/1.2 "Nunito", "Malgun Gothic", system-ui, sans-serif;
+  background: linear-gradient(180deg, var(--y-surface1), var(--y-surface2)); border: 1.5px solid var(--y-edge);
+  box-shadow: 0 4px 14px rgba(0,0,0,.28), inset 0 1px 0 var(--y-gloss); animation: ys-in .3s cubic-bezier(.2,1.4,.4,1);
+  transition: opacity .35s, transform .35s; }
+.yuja-status.out { opacity: 0; transform: translateY(-6px); }
+.yuja-status.ask { pointer-events: auto; padding-right: 6px; }
+.yuja-status button { border: 0; cursor: pointer; border-radius: 999px; font: 800 12px "Nunito", system-ui, sans-serif; }
+.yuja-status .ys-go { margin-left: 4px; padding: 4px 12px; color: var(--y-learn-ink);
+  background: linear-gradient(180deg, var(--y-learn-hi), var(--y-learn)); box-shadow: 0 1px 3px rgba(0,0,0,.15), inset 0 1px 0 #fff8; }
+.yuja-status .ys-go:hover { filter: brightness(1.05); }
+.yuja-status .ys-no { width: 22px; height: 22px; color: var(--y-soft); background: none; }
+.yuja-status .ys-no:hover { color: var(--y-ink); background: var(--y-hover); }
+.yuja-status img { width: 18px; height: 18px; animation: ys-bob 1.3s ease-in-out infinite; }
+@keyframes ys-bob { 50% { transform: translateY(-2px) rotate(-8deg); } }
+@keyframes ys-in { from { opacity: 0; transform: translateY(-6px) scale(.95); } }
+
+/* Video settings menu (opened from the ⚙) */
+.yuja-settings { position: absolute; top: 56px; right: 12px; z-index: 62; width: 270px; padding: 12px 14px;
+  max-height: calc(100% - 120px); overflow: hidden auto; scrollbar-width: thin; box-sizing: border-box;
+  grid-template-columns: minmax(0, 1fr);   /* long voice names must not widen the menu */
+  display: grid; gap: 6px; border-radius: 18px; color: var(--y-ink); font: 600 13px/1.4 "Nunito", system-ui, sans-serif;
+  background: linear-gradient(180deg, var(--y-surface1), var(--y-surface2)); border: 1.5px solid var(--y-edge);
+  box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+.yuja-settings > label:not(.ys-check) { margin-top: 4px; font-size: 11px; font-weight: 800; color: var(--y-soft); text-transform: uppercase; letter-spacing: .04em; }
+.yuja-settings .ys-check { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.yuja-settings input { accent-color: var(--y-learn-lo); }
+.yuja-settings input[type=range] { width: 100%; }
+.yuja-settings .ys-seg { display: flex; padding: 2px; border-radius: 999px; background: var(--y-seg); }
+.yuja-settings .ys-seg { flex-wrap: wrap; }
+.yuja-settings .ys-seg button { flex: 1; padding: 4px 0; border: 0; border-radius: 999px; cursor: pointer;
+  font: 700 12px "Nunito", system-ui, sans-serif; color: var(--y-soft); background: none; }
+.yuja-settings .ys-seg button.on { color: var(--y-learn-ink); background: linear-gradient(180deg, var(--y-learn-hi), var(--y-learn)); box-shadow: 0 1px 3px rgba(0,0,0,.15); }
+.yuja-settings .ys-themes { display: flex; justify-content: space-between; }
+.yuja-settings .ys-themes button { width: 40px; height: 40px; border-radius: 50%; border: 2px solid transparent; cursor: pointer;
+  font-size: 19px; line-height: 1; box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 1px 4px rgba(0,0,0,.2); transition: transform .15s; }
+.yuja-settings .ys-themes button:hover { transform: translateY(-2px); }
+.yuja-settings .ys-themes button.on { border-color: var(--y-ink); }
+.yuja-settings .ys-head { margin: 8px -14px 0; padding: 8px 14px 0; border-top: 1px solid var(--y-line);
+  font-size: 12px; font-weight: 800; color: var(--y-accent); }
+.yuja-settings .ys-row { display: flex; align-items: center; gap: 8px; min-height: 28px; }
+.yuja-settings .ys-row > span { flex: none; width: 74px; font-size: 12px; color: var(--y-soft); }
+.yuja-settings .ys-row > .ys-seg, .yuja-settings .ys-row > select, .yuja-settings .ys-row > input[type=range] { flex: 1; min-width: 0; }
+.yuja-settings select, .yuja-settings .ys-font-name { box-sizing: border-box; padding: 4px 8px; border-radius: 10px;
+  border: 1px solid var(--y-line); background: var(--y-field); color: var(--y-ink); font: 600 12px "Nunito", system-ui, sans-serif; }
+.yuja-settings .ys-font-name { width: 100%; outline: none; }
+.yuja-settings input[type=color] { flex: none; width: 30px; height: 24px; padding: 0 2px; border: 1px solid var(--y-line); border-radius: 8px;
+  background: var(--y-field); cursor: pointer; }
+.yuja-settings .ys-auto { padding: 3px 10px; border: 1px solid var(--y-line); border-radius: 999px; cursor: pointer;
+  font: 700 11px "Nunito", system-ui, sans-serif; color: var(--y-soft); background: var(--y-field); }
+.yuja-settings .ys-auto.on { color: var(--y-learn-ink); border-color: transparent; background: linear-gradient(180deg, var(--y-learn-hi), var(--y-learn)); }
+.yuja-settings .ys-play { flex: none; width: 26px; height: 24px; border: 1px solid var(--y-line); border-radius: 999px; cursor: pointer;
+  font-size: 10px; color: var(--y-ink); background: var(--y-field); }
+.yuja-settings .ys-play:hover { border-color: var(--y-new); }
+.yuja-settings .ys-ppc { flex: none; width: 70px; font-size: 11px; font-style: normal; color: var(--y-faint); }
+.yuja-settings .ys-hint em { flex: 1; font-size: 12px; font-style: normal; color: var(--y-faint); }
+.yuja-settings .ys-keys { margin-top: 6px; font-size: 11px; color: var(--y-soft); }
+.yuja-settings kbd { font: 800 10px "Nunito", sans-serif; padding: 0 4px; border-radius: 4px; background: var(--y-field); border: 1px solid var(--y-line); }
+
+/* Subtitle browser (YouTube right column): text first, everything else on hover. */
+.yuja-panel { margin-bottom: 12px; padding: 10px; border-radius: 20px; color: var(--y-ink);
+  font: 14px/1.5 "Nunito", "Malgun Gothic", system-ui, sans-serif;
+  background: linear-gradient(180deg, var(--y-surface1), var(--y-surface2)); border: 1.5px solid var(--y-edge);
+  box-shadow: 0 6px 20px var(--y-shadow), inset 0 1px 0 var(--y-gloss); }
+.yuja-panel .yp-head { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+/* Filter dropdown: custom, so the open list matches the theme. */
+.yuja-panel .yp-dd { position: relative; flex: 1; }
+.yuja-panel .yp-dd-btn { display: flex; align-items: center; gap: 6px; width: 100%; padding: 6px 12px; border-radius: 999px;
+  border: 1px solid var(--y-line); background: var(--y-field); cursor: pointer; font: 700 13px "Nunito", system-ui, sans-serif; color: inherit; text-align: left; }
+.yuja-panel .yp-dd-btn:hover, .yuja-panel .yp-dd-btn:focus-visible { border-color: var(--y-new); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--y-new) 20%, transparent); }
+.yuja-panel .yp-dd-label { flex: 1; }
+.yuja-panel .yp-dd-label b { margin-left: 4px; padding: 0 7px; border-radius: 999px; font-size: 11px; color: var(--y-new-ink); background: var(--y-new-hi); }
+.yuja-panel .yp-dd-caret { color: var(--y-faint); font-size: 11px; }
+.yuja-panel .yp-dd-list { position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 10; padding: 6px;
+  border-radius: 18px; background: linear-gradient(180deg, var(--y-surface1), var(--y-surface2)); border: 1.5px solid var(--y-edge);
+  box-shadow: 0 12px 32px var(--y-shadow), inset 0 1px 0 var(--y-gloss); animation: yp-pop .16s cubic-bezier(.2,1.5,.4,1); }
+@keyframes yp-pop { from { opacity: 0; transform: translateY(-4px) scale(.98); } }
+.yuja-panel .yp-dd-list button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 8px 12px; border: 0;
+  border-radius: 12px; background: none; cursor: pointer; font: 700 14px "Nunito", system-ui, sans-serif; color: var(--y-ink); text-align: left; }
+.yuja-panel .yp-dd-list button:nth-child(2), .yuja-panel .yp-dd-list button:nth-child(4),
+.yuja-panel .yp-dd-list button:nth-child(6), .yuja-panel .yp-dd-list button:nth-child(8) { margin-bottom: 4px; }
+.yuja-panel .yp-dd-list button > span:first-child { flex: 1; }
+.yuja-panel .yp-dd-list button:hover, .yuja-panel .yp-dd-list button:focus-visible { background: var(--y-hover); outline: none; }
+.yuja-panel .yp-dd-list button.on { background: linear-gradient(90deg, color-mix(in srgb, var(--y-learn) 50%, transparent), color-mix(in srgb, var(--y-learn-hi) 30%, transparent)); }
+.yuja-panel .yp-dd-n { min-width: 22px; text-align: right; font-size: 12px; color: var(--y-faint); font-variant-numeric: tabular-nums; }
+.yuja-panel .yp-dd-check { width: 12px; color: var(--y-accent); visibility: hidden; }
+.yuja-panel .yp-dd-list button.on .yp-dd-check { visibility: visible; }
+.yuja-panel .yp-pct { flex: none; padding: 2px 9px; border-radius: 999px; font: 800 11px "Nunito", sans-serif; color: var(--y-new-ink); background: var(--y-new-hi); }
+.yuja-panel .yp-pct:empty { display: none; }
+.yuja-panel .yp-icon { width: 30px; height: 30px; border: 0; border-radius: 50%; cursor: pointer; font-size: 16px;
+  color: var(--y-soft); background: color-mix(in srgb, var(--y-field) 80%, transparent); }
+.yuja-panel .yp-close { font-size: 13px; }
+.yuja-panel .yp-icon:hover { background: var(--y-field); color: var(--y-ink); }
+.yuja-panel .yp-search { box-sizing: border-box; width: 100%; margin-bottom: 6px; padding: 5px 12px; border-radius: 999px;
+  font: inherit; border: 1px solid var(--y-line); background: var(--y-field); color: inherit; outline: none; }
+.yuja-panel .yp-search:focus { border-color: var(--y-new); box-shadow: 0 0 0 3px color-mix(in srgb, var(--y-new) 25%, transparent); }
+.yuja-panel .yp-list { max-height: 60vh; overflow-y: auto; }
+.yuja-panel .yp-row { position: relative; display: flex; align-items: baseline; gap: 8px; padding: 5px 8px; border-radius: 12px;
+  cursor: pointer; font-size: 15px; word-break: keep-all; }
+.yuja-panel .yp-row:hover { background: var(--y-hover); }
+.yuja-panel .yp-row.on { background: linear-gradient(90deg, color-mix(in srgb, var(--y-learn) 45%, transparent), color-mix(in srgb, var(--y-learn-hi) 20%, transparent)); }
+.yuja-panel .yp-text { flex: 1; }
+.yuja-panel .yp-n { flex: none; min-width: 16px; text-align: center; border-radius: 999px; font: 800 10px/16px "Nunito", sans-serif; }
+.yuja-panel .yp-n.one { color: var(--y-learn-ink); background: var(--y-learn); }
+.yuja-panel .yp-n.many { color: var(--y-new-ink); background: var(--y-new); }
+.yuja-panel .yp-acts { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); display: none; align-items: center; gap: 4px;
+  padding: 2px 4px 2px 14px; border-radius: 999px; background: linear-gradient(90deg, transparent, var(--y-surface2) 30%); }
+.yuja-panel .yp-row:hover .yp-acts { display: flex; }
+.yuja-panel .yp-time { font-size: 11px; color: var(--y-faint); font-variant-numeric: tabular-nums; }
+.yuja-panel .yp-acts button { width: 24px; height: 24px; border: 0; border-radius: 50%; cursor: pointer; font-weight: 800; }
+.yuja-panel .yp-bm { color: var(--y-new-lo); background: var(--y-field); }
+.yuja-panel .yp-mine { color: var(--y-known-ink); background: linear-gradient(180deg, var(--y-known-hi), var(--y-known)); }
+/* Batch mining: ☑ shows a tick box on each row; picked rows tint, mined rows get a ✓ (✗ + reason on hover). */
+.yuja-panel .yp-check { display: none; flex: none; width: 15px; height: 15px; margin-top: 3px; border-radius: 5px; box-sizing: border-box;
+  border: 1.5px solid var(--y-line); background: var(--y-field); align-self: flex-start; }
+.yuja-panel.selecting .yp-check { display: block; }
+.yuja-panel .yp-row.sel .yp-check { border-color: var(--y-learn-lo); background: var(--y-learn) center / 11px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6.5 5 9l5-6' fill='none' stroke='%232c4a10' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+.yuja-panel.selecting .yp-row.sel { background: color-mix(in srgb, var(--y-learn) 22%, transparent); }
+.yuja-panel .yp-row.mined .yp-text::after { content: " ✓"; color: var(--y-known-lo); font-weight: 800; }
+.yuja-panel .yp-row.failed .yp-text::after { content: " ✗"; color: #c0392b; font-weight: 800; }
+.yuja-panel .yp-batch { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 6px; padding: 6px 8px;
+  border-radius: 14px; background: color-mix(in srgb, var(--y-field) 80%, transparent); border: 1px solid var(--y-line); font-size: 12px; }
+.yuja-panel .yp-batch button { padding: 3px 10px; border-radius: 999px; border: 1px solid var(--y-line); cursor: pointer;
+  font: 800 12px "Nunito", system-ui, sans-serif; color: var(--y-ink); background: var(--y-field); }
+.yuja-panel .yp-count { flex: 1; min-width: 120px; color: var(--y-soft); font-weight: 700; }
+.yuja-panel .yp-batch .yp-go { border: 0; color: var(--y-known-ink); background: linear-gradient(180deg, var(--y-known-hi), var(--y-known)); }
+.yuja-panel .yp-batch .yp-go:disabled { filter: grayscale(.6); cursor: default; }
+.yuja-panel .yp-row.bm::before { content: "★"; position: absolute; left: -2px; top: 6px; font-size: 9px; color: var(--y-new-lo); }
+.yuja-panel [hidden], .yuja-settings [hidden] { display: none !important; }   /* our display:flex rows would override [hidden] */
+
+/* Thumbnail scores (YouTube home / search / recommendations): known > learning > new colors, orange = hardest. */
+.yuja-score { position: absolute; left: 6px; bottom: 6px; z-index: 5; padding: 1px 8px; border-radius: 999px; pointer-events: none;
+  font: 800 12px/18px "Nunito", system-ui, sans-serif; box-shadow: 0 1px 4px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.6); }
+.yuja-score[data-tier=easy]   { color: var(--y-known-ink); background: linear-gradient(180deg, var(--y-known-hi), var(--y-known)); }
+.yuja-score[data-tier=good]   { color: var(--y-learn-ink); background: linear-gradient(180deg, var(--y-learn-hi), var(--y-learn)); }
+.yuja-score[data-tier=hard]   { color: var(--y-new-ink); background: linear-gradient(180deg, var(--y-new-hi), var(--y-new)); }
+.yuja-score[data-tier=harder] { color: #fff; background: linear-gradient(180deg, #ffb27a, #f57c00); }
+
+/* "Server not running" notice */
+.yuja-toast { position: fixed; right: 16px; bottom: 16px; z-index: 2147483647; max-width: 360px; padding: 12px 16px; border-radius: 16px;
+  font: 600 13px/1.45 "Nunito", system-ui, sans-serif; color: var(--y-ink); border: 1.5px solid var(--y-edge);
+  background: linear-gradient(180deg, var(--y-surface1), var(--y-surface2)); box-shadow: 0 10px 30px var(--y-shadow); animation: yp-pop .25s; }
+.yuja-toast code { font-size: 12px; padding: 0 4px; border-radius: 4px; background: var(--y-field); border: 1px solid var(--y-line); }

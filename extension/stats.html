@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yuja Stats</title>
+  <link rel="stylesheet" href="content.css">
+  <link rel="stylesheet" href="player.css">
+  <link rel="stylesheet" href="stats.css">
+</head>
+<body>
+  <nav class="nav"><b>🍋 Yuja</b><a href="player.html">Player</a><a href="stats.html" class="on">Stats</a></nav>
+  <main class="stats">
+    <section class="tiles" id="tiles"></section>
+    <section class="card-box"><h2>Known words</h2><div class="chart" id="known"></div></section>
+    <div class="two">
+      <section class="card-box"><h2>Minutes watched</h2><div class="chart" id="watch"></div></section>
+      <section class="card-box"><h2>Cards mined</h2><div class="chart" id="mined"></div></section>
+    </div>
+    <section class="card-box">
+      <h2>Unknown words you keep meeting</h2>
+      <p class="hint">From videos and pages you opened. Click a word to look it up, mark it, or mine it.</p>
+      <ol class="unknown" id="unknown"></ol>
+    </section>
+  </main>
+  <div class="tip" id="tip" hidden></div>
+  <script src="content.js"></script>
+  <script src="youtube.js"></script>
+  <script src="stats.js"></script>
+</body>
+</html>

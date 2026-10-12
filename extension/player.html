@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yuja Player</title>
+  <link rel="stylesheet" href="content.css">
+  <link rel="stylesheet" href="player.css">
+</head>
+<body>
+  <nav class="nav"><b>🍋 Yuja</b><a href="player.html" class="on">Player</a><a href="stats.html">Stats</a></nav>
+  <label class="drop" id="drop">
+    <input type="file" id="pick" accept="video/*,.mkv,.srt,.vtt" multiple hidden>
+    <div class="drop-icon">🍋</div>
+    <b>Drop a video and its subtitles</b>
+    <span>.mp4 / .mkv / .webm + .srt / .vtt — or click to choose</span>
+    <span class="drop-status" id="status"></span>
+  </label>
+  <main class="stage" id="stage" hidden>
+    <div class="left">
+      <div id="movie_player"><video id="video" controls></video></div>
+      <h1 id="title"></h1>
+    </div>
+    <aside id="secondary"></aside>
+  </main>
+  <script src="content.js"></script>
+  <script src="youtube.js"></script>
+  <script src="player.js"></script>
+</body>
+</html>

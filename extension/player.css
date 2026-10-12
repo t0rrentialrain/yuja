@@ -1,0 +1,27 @@
+/* Local player page: same fruit theme tokens as the YouTube overlay (content.css). */
+body { margin: 0; min-height: 100vh; font: 15px/1.5 "Nunito", "Malgun Gothic", system-ui, sans-serif; color: var(--y-ink);
+  background: radial-gradient(120% 80% at 100% 0%, var(--y-glow1), transparent 60%),
+              radial-gradient(90% 70% at 0% 100%, var(--y-glow2), transparent 65%), var(--y-surface1); }
+.drop { box-sizing: border-box; display: grid; place-items: center; align-content: center; gap: 6px; margin: 8vh auto;
+  width: min(560px, calc(100% - 32px)); min-height: 300px; padding: 32px; text-align: center; cursor: pointer;
+  border: 2.5px dashed var(--y-line); border-radius: 28px; background: color-mix(in srgb, var(--y-field) 70%, transparent); transition: background .2s, transform .2s; }
+.drop.over { background: var(--y-surface2); transform: scale(1.02); border-color: var(--y-new); }
+.drop-icon { font-size: 48px; }
+.drop b { font-size: 20px; }
+.drop span { color: var(--y-soft); }
+.drop-status { color: #c0392b !important; font-weight: 700; }
+[hidden] { display: none !important; }
+.stage { display: flex; gap: 24px; padding: 24px; align-items: flex-start; }
+.left { flex: 1; min-width: 0; }
+#movie_player { position: relative; border-radius: 18px; overflow: hidden; background: #000; box-shadow: 0 10px 30px var(--y-shadow); }
+#movie_player video { display: block; width: 100%; max-height: 78vh; }
+h1 { margin: 14px 4px; font-size: 18px; }
+#secondary { width: 400px; flex: none; }
+@media (max-width: 900px) { .stage { flex-direction: column; } #secondary { width: 100%; } }
+
+/* Top nav shared by the player and stats pages */
+.nav { display: flex; align-items: center; gap: 6px; padding: 14px 24px 0; }
+.nav b { margin-right: 10px; font-size: 17px; }
+.nav a { padding: 4px 14px; border-radius: 999px; font-weight: 700; color: var(--y-soft); text-decoration: none; }
+.nav a:hover { background: var(--y-hover); color: var(--y-ink); }
+.nav a.on { color: var(--y-learn-ink); background: var(--y-learn); }

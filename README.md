@@ -3,7 +3,7 @@
 A Korean immersion tool in the spirit of Migaku and Kimchi Reader: known/unknown
 word coloring everywhere, a click-to-look-up card, one-click Anki mining, a
 subtitle browser with i+1 recommendations, and comprehension scores. Built on
-[kparse](../korean-parser) (Kiwi + Jev) so words *and grammar patterns* are
+[kparse](https://github.com/t0rrentialrain/korean-parser) (Kiwi + Jev) so words *and grammar patterns* are
 tracked like vocabulary.
 
 ## Features
@@ -57,7 +57,7 @@ Then in Chrome: `chrome://extensions` → Developer mode → **Load unpacked** �
 
 Requirements:
 
-- `korean-parser/` and `kiwi-ankimorphs/` next to `yuja/`.
+- [`korean-parser/`](https://github.com/t0rrentialrain/korean-parser) and `kiwi-ankimorphs/` next to `yuja/`.
 - The sentence-mining skill's `config.json` (Anki note type, deck, known-word
   sources). Yuja reuses it rather than having its own.
 - KRDict's full XML download (free login) in `yuja/`. Optionally Wiktionary's
